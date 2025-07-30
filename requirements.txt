@@ -1,0 +1,29 @@
+# Minimal top-level requirements required to run the project
+
+--extra-index-url https://download.pytorch.org/whl/cpu
+# Main requirements
+numpy==1.20.3
+scipy==1.6.3
+pandas==1.2.4
+# We use pygmo for discrete KG but pymoo for JES. The reason is an arbitrary
+# design choice for discrete KG, followed by a later implementation of JES
+# taken from botorch which already uses pymoo.
+#pygmo==2.18.0  # Installed via conda
+pymoo==0.6.0.1
+pyarrow==8.0.0
+torch==2.1.0
+# Install from github directly to get HVKG at time of experiment
+botorch @ git+https://github.com/pytorch/botorch.git@c14808f7a1ce28fdb0e7158e47330b1006687682
+gpytorch==1.11
+pyyaml==6.0.1
+matplotlib==3.7.1
+seaborn==0.13.0
+
+# Finally, some local requirements
+ipython==8.16.1
+jupyterlab==4.0.7
+tqdm==4.66.1
+ipywidgets==8.1.1
+pytest==7.4.2
+nbdime==3.2.1
+pre-commit>=3.5.0

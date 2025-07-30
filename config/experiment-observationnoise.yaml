@@ -1,0 +1,58 @@
+# An example config file for an experiment where one objective has observation noise
+problem:
+  type: gp-sample
+  args:
+    id: observationnoise
+    regenerate: false
+  noise_stdevs: [1, 0]
+max_n_batch: 1000
+max_cumulative_cost: 1000
+model:
+  bounds: [[0, 0], [1, 1]]
+  outputs:
+    - likelihood:
+        type: gaussian
+        noise_prior:
+          type: gamma
+          args:
+            concentration: 1.1
+            rate: 0.05
+      fix_zero_noise: false
+      kernel:
+        type: matern
+        ard: true
+        args:
+          nu: 2.5
+        lengthscale_prior:
+          type: gamma
+          args:
+            concentration: 3
+            rate: 10
+        outputscale_prior:
+          type: gamma
+          args:
+            concentration: 2
+            rate: 0.15
+    - likelihood:
+        type: gaussian
+        noise_prior:
+          type: gamma
+          args:
+            concentration: 1.1
+            rate: 0.05
+      fix_zero_noise: true
+      kernel:
+        type: matern
+        ard: true
+        args:
+          nu: 2.5
+        lengthscale_prior:
+          type: gamma
+          args:
+            concentration: 3
+            rate: 10
+        outputscale_prior:
+          type: gamma
+          args:
+            concentration: 2
+            rate: 0.15
