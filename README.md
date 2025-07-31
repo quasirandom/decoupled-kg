@@ -5,7 +5,7 @@
 [![Unit tests](https://github.com/JackBuck/decoupled-kg/actions/workflows/test.yaml/badge.svg?branch=main)](https://github.com/JackBuck/decoupled-kg/actions/workflows/test.yaml)
 
 This repository contains the code to run the experiments in the paper (Buckingham et al., 2025):
-> Buckingham, J. M., Rojas Gonzalez, S., & Branke, J. (2025). Knowledge Gradient for Multi-Objective Bayesian Optimization with Decoupled Evaluations. In _International Conference on Evolutionary Multi-objective Optimization_. [DOI: 10.1007/978-981-96-3538-2_9](https://www.doi.org/10.1007/978-981-96-3538-2_9) [[arXiv](https://arxiv.org/abs/2302.01310)]
+> Buckingham, J. M., Rojas Gonzalez, S., & Branke, J. (2025). Knowledge Gradient for Multi-Objective Bayesian Optimization with Decoupled Evaluations. In _International Conference on Evolutionary Multi-objective Optimization_ (pp. 117-132). [DOI: 10.1007/978-981-96-3538-2_9](https://www.doi.org/10.1007/978-981-96-3538-2_9) [[arXiv](https://arxiv.org/abs/2302.01310)]
 
 The paper introduces an acquisition function for finding the Pareto front of a multi-objective optimization problem when the objectives are given by separate, time-consuming experiments (the so-called 'decoupled' setting).
 
